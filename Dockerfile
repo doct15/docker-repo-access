@@ -2,9 +2,12 @@ FROM node:4.2.3
 EXPOSE 8080
 
 # Add the source code
-RUN mkdir app
-WORKDIR app
-COPY . .
+#RUN mkdir app
+#WORKDIR app
+#COPY . .
+RUN pwd
+RUN whoami
+COPY /home/distelli/.ssh/* ~/.ssh/
 
 # Update NPM
 #RUN npm install -g npm --silent
